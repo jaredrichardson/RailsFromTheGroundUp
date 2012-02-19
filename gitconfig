@@ -1,0 +1,27 @@
+[user]
+	name = TYPE YOUR NAME HERE
+  email = ADD YOUR EMAIL HERE 
+[alias]
+       a = add
+       aa = !git add -u && git add .
+       amend = commit --amend -C HEAD
+       br = branch
+       c = commit
+       ci = commit -m
+       cia = commit -am
+       co = checkout
+       di = diff
+       dt = difftool
+       l = log --branches --date=short --graph --pretty=format:'%Cred%h%Creset %Cblue%ad%Creset %C(yellow)%aN%Creset %s%C(bold green)%d%Creset' -10
+       la = log --branches --date=short --graph --pretty=format:'%Cred%h%Creset %Cblue%ad%Creset %C(yellow)%aN%Creset %s%C(bold green)%d%Creset'
+       k = !gitk
+       sm = submodule
+       st = status
+       sts = status -s
+       # update = pull --rebase
+[apply]
+      whitespace = strip
+[diff]
+    color = auto
+[status]
+    color = auto
