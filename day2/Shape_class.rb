@@ -1,5 +1,5 @@
 class Shape
-  attr_accessor :sides, :length, :width
+  attr_accessor :length, :width
 end
 
 class Rectangle < Shape
@@ -13,6 +13,6 @@ class Rectangle < Shape
 
   def respond
     puts "The area is #{area}"
-    puts "The perimeter is #{perimeter}"
+    return "The perimeter is #{perimeter}"
   end
 end
