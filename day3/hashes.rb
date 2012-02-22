@@ -18,3 +18,21 @@ student_favorite_colors["Dave"] = "Black"
 student_favorite_colors.each do |student,color|
 puts "#{student} is a big fan of #{color}."
 end
+
+fruit_basket = Hash.new
+fruit_basket["apple"] =2.50
+fruit_basket["pear"] =.70
+
+prices = fruit_basket.values
+
+def total(cost)
+  total = 0
+  cost.each do |item|
+    total = total.to_f + item
+  end
+  
+  return total
+end
+  
+  
+  
