@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Wheel color:</b>
+  <%= @skateboard.wheel_color %>
+</p>
+
+<p>
+  <b>Style:</b>
+  <%= @skateboard.style %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @skateboard.size %>
+</p>
+
+
+<%= link_to 'Edit', edit_skateboard_path(@skateboard) %> |
+<%= link_to 'Back', skateboards_path %>

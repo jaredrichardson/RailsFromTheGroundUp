@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wheel_color: 
+  style: 
+  size: 1
+
+two:
+  wheel_color: 
+  style: 
+  size: 1
