@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wheel_color: MyString
+  deck_size: 
+  board_brand: MyString
+
+two:
+  wheel_color: MyString
+  deck_size: 
+  board_brand: MyString

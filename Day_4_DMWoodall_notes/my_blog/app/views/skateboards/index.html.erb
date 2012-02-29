@@ -1,0 +1,43 @@
+<h1>Daves Skate Shop on Rails</h1>
+<h2>Inventory on hand</h2>
+<table>
+  <tr>
+    <th>Brand</th>
+    <th>Deck size</th>
+    <th>Wheel color</th>
+    <th>Total Price</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @skateboards.each do |skateboard| %>
+  <tr>
+    <td><%= image_tag(skateboard_icon(skateboard), {:width => 40}) %></td>
+    <td><%= skateboard.board_brand %></td>
+    <td><%= skateboard.deck_size %></td>
+      <td><%= skateboard.wheel_color %></td>
+        <td><%= skateboard.price %></td>
+    <td><%= link_to 'Board Details', skateboard %> | </td>
+    <td><%= link_to 'Modify Board', edit_skateboard_path(skateboard) %> | </td>
+    <td><%= link_to 'Remove from inventory', skateboard, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+    
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Order a new Skateboard', new_skateboard_path %> | <%= link_to 'Skateboard pile', count_path %>
+
+<h1>The total shop inventory is <%= number_to_currency(@board_price,{:separator =>" and "}) %> cents! </h1>
+<h2>The smallest deck we have is <%= @smallest_deck %></h2>
+<h2>The biggest deck we have is <%= @biggest_deck %></h2>
+
+
+
+
+
+
+
+
+
+
