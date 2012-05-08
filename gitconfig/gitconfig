@@ -19,6 +19,7 @@
        st = status
        sts = status -s
        # update = pull --rebase
+       lstat = log --stat --summary
 [apply]
       whitespace = strip
 [diff]
