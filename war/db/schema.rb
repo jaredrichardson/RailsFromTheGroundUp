@@ -11,20 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120223204935) do
+ActiveRecord::Schema.define(:version => 20120224182702) do
 
-  create_table "card_decks", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+# Could not dump table "skateboards" because of following StandardError
+#   Unknown type 'reference' for column 'store_id'
 
-  create_table "skateboards", :force => true do |t|
-    t.string   "wheel_color"
+  create_table "wheels", :force => true do |t|
     t.string   "style"
-    t.integer  "size"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.float    "price"
+    t.integer  "skateboard_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
+
+  add_index "wheels", ["skateboard_id"], :name => "index_wheels_on_skateboard_id"
 
 end

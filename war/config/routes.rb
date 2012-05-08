@@ -1,4 +1,6 @@
 War::Application.routes.draw do
+  resources :wheels
+
   resources :skateboards
 
   # The priority is based upon order of creation:
@@ -8,8 +10,12 @@ War::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
+  root :to => "skateboards#index"
+
   match 'skateboard/count' => 'skateboards#count'
   match 'count'            => 'skateboards#count'
+
+  resources :boards
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
